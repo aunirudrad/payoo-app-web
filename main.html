@@ -17,6 +17,7 @@
 
             'color-primary': 'rgba(8, 8, 8, 0.9)',
             'color-secondary': 'rgba(8, 8, 8, 0.5)',
+            'bg-color-btn': '#F4F5F7',
           }
         }
       }
@@ -25,7 +26,7 @@
 </head>
 
 <body class="bg-slate-800">
-  <section class="bg-gray-200 max-w-md min-h-screen mx-auto py-4">
+  <section class="bg-slate-200 max-w-md min-h-screen mx-auto py-4">
 
     <!-- header section -->
     <header class="mx-6 flex justify-between items-center mb-4">
@@ -34,21 +35,89 @@
           <img src="assets/Group.png" class="w-full" alt="">
         </div>
         <div>
-          <h3 class="text-lg font-extrabold text-color-primary">$ 45000</h3>
+          <h3 class="text-lg font-extrabold text-color-primary">$<span id="balance">45000</span></h3>
           <p class="text-sm text-color-secondary">Available Balance</p>
         </div>
       </div>
       <div>
-        <button class="text-sm rounded-lg border border-black border-dotted px-3 py-2"><i class="fa-solid fa-arrow-right-from-bracket rotate-90"></i> LogOut</button>
+        <button class="text-sm rounded-lg border border-black border-dotted px-3 py-2"><i
+            class="fa-solid fa-arrow-right-from-bracket rotate-90"></i> LogOut</button>
       </div>
     </header>
     <hr class="border border-black border-dashed">
 
-    
     <!-- hero section -->
+    <section class="mx-6 mb-6">
 
+      <!-- text area -->
+      <div>
+        <h2 class="mt-8 text-2xl font-semibold mb-3"><i class="fa-solid fa-fire" style="color: #FFD43B;"></i> Welcome to
+          Payooo!</h2>
+        <p>Enjoy easy and convenient financial services with us. Cashout charge is low and </p>
+      </div>
+
+      <!-- content area -->
+      <div class="my-6 grid grid-cols-3 gap-2">
+        <div class="border border-black rounded-lg p-4 text-center">
+          <img class="w-8 mx-auto mb-2" src="assets/wallet1.png" alt="">
+          <h3 class="text-sm font-semibold">Add Money</h3>
+        </div>
+        <div class="border border-black rounded-lg p-4 text-center">
+          <img class="w-8 mx-auto mb-2" src="assets/send1.png" alt="">
+          <h3 class="text-sm font-semibold">Cashout</h3>
+        </div>
+        <div class="border border-black rounded-lg p-4 text-center">
+          <img class="w-8 mx-auto mb-2" src="assets/money1.png" alt="">
+          <h3 class="text-sm font-semibold">Transfer Money</h3>
+        </div>
+        <div class="border border-black rounded-lg p-4 text-center">
+          <img class="w-8 mx-auto mb-2" src="assets/bonus1.png" alt="">
+          <h3 class="text-sm font-semibold">Get Bonus</h3>
+        </div>
+        <div class="border border-black rounded-lg p-4 text-center">
+          <img class="w-8 mx-auto mb-2" src="assets/purse1.png" alt="">
+          <h3 class="text-sm font-semibold">Pay Bill</h3>
+        </div>
+        <div class="border border-black rounded-lg p-4 text-center">
+          <img class="w-8 mx-auto mb-2" src="assets/transaction1.png" alt="">
+          <h3 class="text-sm font-semibold">Transactions</h3>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add money section -->
+    <section class="mx-6">
+      <h2 class="text-lg font-semibold mb-4">Add Money</h2>
+      <div class="bg-white border rounded-xl px-11 py-4">
+        <form action="">
+          <fieldset class="fieldset">
+            <label class="fieldset-label font-semibold">Select Bank Account</label>
+            <select id="bank-account" class="select input bg-bg-color-btn px-2 rounded-full">
+              <option disabled selected>Select bank Account</option>
+              <option>BKash</option>
+              <option>Nagad</option>
+              <option>Rocket</option>
+              <option>Upay</option>
+              <option>Visa Card</option>
+              <option>Master Card</option>
+            </select>
+            <label class="fieldset-label font-semibold">Bank Account Number</label>
+            <input value="01311107482" id="account-number" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 11 digit account number" />
+            <label class="fieldset-label font-semibold">Amount to Add</label>
+            <input id="add-amount" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Add Amount to withdraw" />
+            <label class="fieldset-label font-semibold">Pin Number</label>
+            <input value="15480" id="account-pin" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 4 digit pin number" />
+            <div><a class="link link-hover">Forgot password?</a></div>
+            <button id="add-money-btn" class="btn btn-neutral mt-4 bg-blue-900 text-white rounded-full">Add Money</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
 
   </section>
+  
+
+  <script src="js/addMoney.js"></script>
 </body>
 
 </html>
