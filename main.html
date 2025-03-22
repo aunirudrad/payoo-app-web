@@ -40,7 +40,7 @@
         </div>
       </div>
       <div>
-        <button class="text-sm rounded-lg border border-black border-dotted px-3 py-2"><i
+        <button id="btn-logout" class="text-sm rounded-lg border border-black border-dotted px-3 py-2"><i
             class="fa-solid fa-arrow-right-from-bracket rotate-90"></i> LogOut</button>
       </div>
     </header>
@@ -58,11 +58,11 @@
 
       <!-- content area -->
       <div class="my-6 grid grid-cols-3 gap-2">
-        <div class="border border-black rounded-lg p-4 text-center">
+        <div id="add-money" class="border border-black rounded-lg p-4 text-center">
           <img class="w-8 mx-auto mb-2" src="assets/wallet1.png" alt="">
           <h3 class="text-sm font-semibold">Add Money</h3>
         </div>
-        <div class="border border-black rounded-lg p-4 text-center">
+        <div id="cashout" class="border border-black rounded-lg p-4 text-center">
           <img class="w-8 mx-auto mb-2" src="assets/send1.png" alt="">
           <h3 class="text-sm font-semibold">Cashout</h3>
         </div>
@@ -86,7 +86,7 @@
     </section>
 
     <!-- Add money section -->
-    <section class="mx-6">
+    <section id="add-money-form" class="mx-6 mb-10 hidden">
       <h2 class="text-lg font-semibold mb-4">Add Money</h2>
       <div class="bg-white border rounded-xl px-11 py-4">
         <form action="">
@@ -114,10 +114,32 @@
       </div>
     </section>
 
+    <!-- cashout section -->
+    <section id="cashout-form" class="mx-6 hidden">
+      <h2 class="text-lg font-semibold mb-4">Cashout</h2>
+      <div class="bg-white border rounded-xl px-11 py-4">
+        <form action="">
+          <fieldset class="fieldset">
+            <label class="fieldset-label font-semibold">Agent Number</label>
+            <input value="01878271214" id="agent-number" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 11 digit account number" />
+            <label class="fieldset-label font-semibold">Amount</label>
+            <input id="cashout-amount" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Add Amount to withdraw" />
+            <label class="fieldset-label font-semibold">Pin Number</label>
+            <input value="15480" id="cashout-pin" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 4 digit pin number" />
+            <div><a class="link link-hover">Forgot password?</a></div>
+            <button id="cashout-btn" class="btn btn-neutral mt-4 bg-blue-900 text-white rounded-full">Cash Out</button>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+
   </section>
   
 
+  <script src="js/logout.js"></script>
   <script src="js/addMoney.js"></script>
+  <script src="js/cashout.js"></script>
+  <script src="js/cards.js"></script>
 </body>
 
 </html>
