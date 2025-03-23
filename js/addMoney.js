@@ -2,19 +2,18 @@
 
 document.getElementById('add-money-btn').addEventListener('click',function(event){
     event.preventDefault();
-    const accountNumber = document.getElementById('account-number').value;
-    const accountPin = document.getElementById('account-pin').value;
-    const convertedPin = parseInt(accountPin);
+    const accountNumber = getInputByID('account-number');
+    const accountPin = convertedInputByID('account-pin');
 
-    const addAmount = document.getElementById('add-amount').value;
 
-    const convertedAmount = parseFloat(addAmount);
-    // console.log(addAmount);
+    // console.log(accountNumber);
+
+    const addAmount = convertedInputByID('add-amount');
+
     const bankAccount = document.getElementById('bank-account').value;
     // console.log(bankAccount);
 
-    const balance = document.getElementById('balance').innerText;
-    const convertedBalance = parseFloat(balance);
+    const balance = getInputByInnerText('balance');
 
     // console.log(convertedBalance);
 
@@ -22,16 +21,16 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
         // console.log('11 character found!');
         // if the account number is correct, now we need to check whether the password is '1111' or not
         if (bankAccount !== 'Select bank Account') {
-            if (convertedAmount) {
-                if (convertedPin === 15480) {
+            if (addAmount) {
+                if (accountPin === 15480) {
                 
-                    const newBalance = convertedBalance + convertedAmount;
+                    const newBalance = balance + addAmount;
         
                     // console.log(newBalance);
         
                     document.getElementById('balance').innerText = newBalance;
         
-                    alert('Money Added to your account ' + convertedAmount + ' Tk via ' + bankAccount);
+                    alert('Money Added to your account ' + addAmount + ' Tk via ' + bankAccount);
                 }
                 else{
                     alert('wrong password!');
