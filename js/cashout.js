@@ -8,7 +8,7 @@ document.getElementById('cashout-btn').addEventListener('click', function(event)
 
     const cashoutAmount = convertedInputByID('cashout-amount');
 
-    const balance = getInputByInnerText('balance');
+    const balance = convertedInputByInnerText('balance');
 
     
     // console.log(typeof balance);

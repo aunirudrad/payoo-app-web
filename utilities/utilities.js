@@ -21,3 +21,12 @@ function getInputByInnerText(id) {
     return elementId;
 
 }
+
+function convertedInputByInnerText(id) {
+
+    const stringID = getInputByInnerText(id);
+
+    const convertedStringID = parseFloat(stringID);
+    
+    return convertedStringID;
+}

@@ -13,7 +13,7 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
     const bankAccount = document.getElementById('bank-account').value;
     // console.log(bankAccount);
 
-    const balance = getInputByInnerText('balance');
+    const balance = convertedInputByInnerText('balance');
 
     // console.log(convertedBalance);
 
