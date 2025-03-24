@@ -21,14 +21,14 @@ document.getElementById('add-money-btn').addEventListener('click',function(event
         // console.log('11 character found!');
         // if the account number is correct, now we need to check whether the password is '1111' or not
         if (bankAccount !== 'Select bank Account') {
-            if (addAmount) {
+            if (addAmount && addAmount > 0) {
                 if (accountPin === 15480) {
                 
                     const newBalance = balance + addAmount;
-        
-                    // console.log(newBalance);
-        
-                    document.getElementById('balance').innerText = newBalance;
+
+                    setInnerTextbyIDandValue('balance', newBalance);
+
+                    addMoneyTransaction(addAmount, bankAccount);
         
                     alert('Money Added to your account ' + addAmount + ' Tk via ' + bankAccount);
                 }

@@ -30,3 +30,11 @@ function convertedInputByInnerText(id) {
     
     return convertedStringID;
 }
+
+function setInnerTextbyIDandValue(id, value) {
+    document.getElementById(id).innerText = value;
+}
+
+function handleToggle(id, status) {
+    document.getElementById(id).style.display = status;
+}

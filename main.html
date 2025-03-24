@@ -18,11 +18,24 @@
             'color-primary': 'rgba(8, 8, 8, 0.9)',
             'color-secondary': 'rgba(8, 8, 8, 0.5)',
             'bg-color-btn': '#F4F5F7',
+
           }
         }
       }
     }
   </script>
+
+  <!-- CSS styles -->
+   <style>
+    .transaction-style{
+      font-size: small;
+      margin-bottom: 10px;
+      padding: 8px 16px;
+      background: white;
+      border-radius: 20px;
+
+    }
+   </style>
 </head>
 
 <body class="bg-slate-800">
@@ -78,7 +91,7 @@
           <img class="w-8 mx-auto mb-2" src="assets/purse1.png" alt="">
           <h3 class="text-sm font-semibold">Pay Bill</h3>
         </div>
-        <div class="border border-black rounded-lg p-4 text-center">
+        <div id="transaction-box" class="border border-black rounded-lg p-4 text-center">
           <img class="w-8 mx-auto mb-2" src="assets/transaction1.png" alt="">
           <h3 class="text-sm font-semibold">Transactions</h3>
         </div>
@@ -102,13 +115,17 @@
               <option>Master Card</option>
             </select>
             <label class="fieldset-label font-semibold">Bank Account Number</label>
-            <input value="01311107482" id="account-number" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 11 digit account number" />
+            <input value="01311107482" id="account-number" type="number" class="input bg-bg-color-btn px-2 rounded-full"
+              placeholder="Enter 11 digit account number" />
             <label class="fieldset-label font-semibold">Amount to Add</label>
-            <input id="add-amount" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Add Amount to withdraw" />
+            <input id="add-amount" type="number" class="input bg-bg-color-btn px-2 rounded-full"
+              placeholder="Add Amount to withdraw" />
             <label class="fieldset-label font-semibold">Pin Number</label>
-            <input value="15480" id="account-pin" type="password" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 4 digit pin number" />
+            <input value="15480" id="account-pin" type="password" class="input bg-bg-color-btn px-2 rounded-full"
+              placeholder="Enter 4 digit pin number" />
             <div><a class="link link-hover">Forgot password?</a></div>
-            <button id="add-money-btn" class="btn btn-neutral mt-4 bg-blue-900 text-white rounded-full">Add Money</button>
+            <button id="add-money-btn" class="btn btn-neutral mt-4 bg-blue-900 text-white rounded-full">Add
+              Money</button>
           </fieldset>
         </form>
       </div>
@@ -121,11 +138,14 @@
         <form action="">
           <fieldset class="fieldset">
             <label class="fieldset-label font-semibold">Agent Number</label>
-            <input value="01878271214" id="agent-number" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 11 digit account number" />
+            <input value="01878271214" id="agent-number" type="number" class="input bg-bg-color-btn px-2 rounded-full"
+              placeholder="Enter 11 digit account number" />
             <label class="fieldset-label font-semibold">Amount</label>
-            <input id="cashout-amount" type="number" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Add Amount to withdraw" />
+            <input id="cashout-amount" type="number" class="input bg-bg-color-btn px-2 rounded-full"
+              placeholder="Add Amount to withdraw" />
             <label class="fieldset-label font-semibold">Pin Number</label>
-            <input value="15480" id="cashout-pin" type="password" class="input bg-bg-color-btn px-2 rounded-full" placeholder="Enter 4 digit pin number" />
+            <input value="15480" id="cashout-pin" type="password" class="input bg-bg-color-btn px-2 rounded-full"
+              placeholder="Enter 4 digit pin number" />
             <div><a class="link link-hover">Forgot password?</a></div>
             <button id="cashout-btn" class="btn btn-neutral mt-4 bg-blue-900 text-white rounded-full">Cash Out</button>
           </fieldset>
@@ -133,10 +153,22 @@
       </div>
     </section>
 
+    <!-- transaction section -->
+    <section id="transaction-history" class="mx-6 mb-10 hidden">
+      <div class="flex justify-between items-center mb-4">
+        <h3 class="font-semibold text-lg">Transaction History</h3>
+        <p class="text-sm text-color-secondary">View All</p>
+      </div>
+      <div id="history-box">
+        
+      </div>
+    </section>
+
   </section>
-  
+
 
   <script src="utilities/utilities.js"></script>
+  <script src="utilities/transaction.js"></script>
   <script src="js/logout.js"></script>
   <script src="js/addMoney.js"></script>
   <script src="js/cashout.js"></script>
